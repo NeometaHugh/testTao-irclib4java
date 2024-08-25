@@ -86,3 +86,5 @@ public class Main {
 }
 
 ```
+
+In the end , u make a the simplest irc client in the world!
