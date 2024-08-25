@@ -13,7 +13,7 @@ public class TaoIO {
 	private Thread deamon;
 	public TaoIO(InputStreamReader r,OutputStreamWriter w,TThreadPool<TaoTask> pool,TaoTask task) {
 		this.r = new BufferedReader(r);
-		this.w = new PrintWriter(w);
+		this.w = new PrintWriter(w,true);
 		this.pool = pool;
 		this.task = task;
 		deamon = new Thread(() -> {
