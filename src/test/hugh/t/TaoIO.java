@@ -19,14 +19,11 @@ public class TaoIO {
 		deamon = new Thread(() -> {
 			try {
                 String line;
-                int i = 0;
                 while ((line = this.r.readLine()) != null) {
-//                  System.out.println(line);
                     if (line.startsWith("PING")) {
                         this.w.println("PONG " + line.split(" ")[1]);
                         Thread.sleep(50);
-                        i++;
-                    }else if (i > 0 && pool != null) {
+                    }else{
                     	task.setLine(line);
                     	pool.execute(task);
                     }
